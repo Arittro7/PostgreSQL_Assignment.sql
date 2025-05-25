@@ -16,3 +16,20 @@ CREATE TABLE species(
   conservation_status VARCHAR(80)
 )
 
+--  creating table for sightings
+CREATE TABLE sightings(
+  sighting_id SERIAL PRIMARY KEY,
+  ranger_id INTEGER REFERENCES rangers(ranger_id),
+  species_id INTEGER REFERENCES species(species_id),
+  sighting_time TIMESTAMP,
+  location VARCHAR(300),
+  notes TEXT
+)
+
+-- inserting data into rangers table
+INSERT INTO rangers (name, region) VALUES
+('Alice Green', 'Northern Hills'),
+('Bob White', 'River Delta'),
+('Carlo King', 'Mountain Range');
+
+-- SELECT * FROM rangers
