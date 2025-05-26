@@ -38,5 +38,19 @@ To see the products list of a table from 21 to 30
 SELECT * FROM products LIMIT 10 OFFSET 30;
 ```
 
+# :dart:How can you modify data using UPDATE statements?
+To modify any existing record from any table the **UPDATE** statement used. It helps to change the value of one or more columns for specific rows.  
+**For Example**
+An employee who has employee_id 7 has been promoted to Senior accountant
+```
+UPDATE employee
+SET designation = 'Senior Accountant'
+WHERE employee_id = 7;
+```
+
+# :dart:Explain the GROUP BY clause and its role in aggregation operations.
+
+The group by clause used to groups rows with the same values in a single row. To execute an Aggregate function group by clause is mast required to get summarize reports within distinct categories
+
 
 
